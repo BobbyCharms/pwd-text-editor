@@ -6,7 +6,6 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 const WorkboxPlugin = require('workbox-webpack-plugin');
 // TODO: Add CSS loaders and babel to webpack.
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
   return {
@@ -28,7 +27,6 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-      new MiniCssExtractPlugin(),
       new WebpackPwaManifest({
         name: 'PWA Text Editor',
         short_name: 'PTE',
